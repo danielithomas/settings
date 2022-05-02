@@ -38,6 +38,9 @@ sudo snap install code --classic
 # Microsoft Powershell
 sudo snap install powershell --classic
 
+# Install the dotnet sdk (latest)
+sudo snap install dotnet-sdk --classic 
+
 # Install Dart Programming Language SDK
 
 wget -qO- https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo gpg --dearmor -o /usr/share/keyrings/dart.gpg
