@@ -1,0 +1,25 @@
+
+# ------------------------------------------------------
+# Config stuff
+# ------------------------------------------------------
+export CUST_CONFIG=$HOME/config
+
+# home user directory on the host OS
+export HOSTHOME=/media/psf/Home
+
+# ------------------------------------------------------
+# Script stuff
+# ------------------------------------------------------
+export CUST_SCRIPTS=$HOME/settings/scripts/nix/
+source $CUST_SCRIPTS/set-aliases.sh
+
+# Setting specific alias for the ubuntu environment
+alias python=python3
+
+# ------------------------------------------------------
+# Fun Stuff - Getting cow to say your fortune!
+# ------------------------------------------------------
+
+source $CUST_SCRIPTS/common/shell-launch.sh stegosaurus
+
+

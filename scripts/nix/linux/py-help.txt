@@ -1,0 +1,9 @@
+|------------------------------------------------------------------|
+|                 *** Python HELP - Commands ***.                  |
+|------------------------------------------------------------------|
+| COMMAND        | DESCRIPTION                                     |
+|------------------------------------------------------------------|
+| create-env     | creates a python 3 virtual environment in the   |
+|                | current directory                               |
+| activate-env   | activate a virtual environment in the current   |
+|                | directory (Python 3)                            |

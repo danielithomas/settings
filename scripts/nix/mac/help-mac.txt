@@ -1,0 +1,21 @@
+| today          | Today's schedule                                |
+| work {entry}   | Log your work e.g. work I did some things.      |
+| add {entry}    | add info to the work journal                    |
+|------------------------------------------------------------------|
+| JIRA PRODUCTIVITY                                                |
+|------------------------------------------------------------------|
+| my-tasks                | get tasks assigned to me               |
+| get-task {ticket}       | get information about a ticket         |
+| go-task {ticket}        | open a link to the task in a browser   |
+| get-new-tasks           | All Jira tasks created in the last     |
+|                         | 24 hours                               |
+| action {entry}          | Adds a new action item to the task     |
+|                         | list (work)                            |
+| idea {entry}            | Add an idea to the task list           |
+|                         | (unassigned)                           |
+| isms {entry}            | Adds a new action item to the ISMS     |
+|                         | task list (ISO27001)                   |
+| card {entry}            | Card up a Jira task                    |
+| bug {entry}             | Card up a Jira bug                     |
+| note {ticket} {entry}   | Add a comment to a ticket              |
+| stand-up                | Prepare data for the morning stand up  |
