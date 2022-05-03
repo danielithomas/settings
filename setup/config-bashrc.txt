@@ -4,6 +4,8 @@
 # ------------------------------------------------------
 export CUST_CONFIG=$HOME/config
 
+PATH=$PATH:$HOME/.dotnet/dotnet
+
 # home user directory on the host OS
 export HOSTHOME=/media/psf/Home
 
