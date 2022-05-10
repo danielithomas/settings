@@ -2,7 +2,7 @@
 
 Setup for various environments
 
-1. You should just be able to run `install-scripts.sh` and that's that. It will then run the install scripts for the given environment (Mac or linux). After it finishes this, the install config script will run, piping the config-bashrc.txt contents into your `.bashrc` 
+1. You should just be able to run `install-and-configure-all.sh` and that's that. It will then run the install scripts for the given environment (Mac or linux). After it finishes this, the install config script will run, piping the config-bashrc.txt contents into your `.bashrc` 
 
 ## Items installed:
 

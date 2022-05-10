@@ -20,3 +20,9 @@ sudo snap install code --classic
 # Microsoft Powershell
 sudo snap install powershell --classic
 
+#
+# Quality of Life Snaps
+#
+
+# Spotify 
+sudo snap install spotify --classic
