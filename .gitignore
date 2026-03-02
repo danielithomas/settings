@@ -1,0 +1,46 @@
+# PII, keys, secrets
+*.pem
+*.key
+*.crt
+*.p12
+*.pfx
+*.keystore
+*.jks
+*.secret
+*.credentials
+credentials.json
+secrets.json
+token.json
+
+# Environment files
+.env
+.env.*
+!.env.example
+
+# SSH keys
+id_rsa
+id_ed25519
+*.pub
+
+# GPG
+*.gpg
+*.asc
+
+# API keys / config with secrets
+.netrc
+.npmrc
+.pypirc
+
+# Local settings
+.claude/
+.vscode/
+*.swp
+*.swo
+*~
+
+# OS junk
+.DS_Store
+Thumbs.db
+
+# Backup files that may contain profile data
+*.bak
