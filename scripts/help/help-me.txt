@@ -1,0 +1,8 @@
+|------------------------------------------------------------------|
+|                    *** HELP ME - Commands ***                    |
+|------------------------------------------------------------------|
+| COMMAND        | DESCRIPTION                                     |
+|------------------------------------------------------------------|
+| makepass       | Make a random password (12 chars)               |
+| backup-shell   | Backup shell profile                            |
+| reload-shell   | Reload the shell                                |

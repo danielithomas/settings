@@ -1,0 +1,2 @@
+| py-help              | Python / uv help                          |
+| install-nerd-font    | Install a Nerd Font by name               |

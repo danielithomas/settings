@@ -1,41 +1,80 @@
 # Settings
 
-Scripts and Setups that can be used across multiple environments
+Personal dotfiles and environment bootstrap repo for Debian-based Linux (Ubuntu, Pop!_OS, etc.) and WSL. Clone into `~/settings` on a fresh machine and run the interactive installer.
 
-The settings project contains several key areas:
-1. `setup` - go here when setting up a fresh environment
-1. `scripts` - base scripts 
+## Quick Start
 
-## What you get
+```bash
+git clone https://github.com/danielithomas/settings.git ~/settings
+bash ~/settings/setup/install.sh
+```
 
-Some old terminal favourites and some applications that get my environment up and running. 
+The installer uses a whiptail checklist to let you pick which components to install. It's idempotent — safe to re-run without duplicating config or reinstalling things.
 
-## Installing
+## What Gets Installed
 
-1. Clone this repo into your home directory: `git clone https://github.com/danielithomas/settings.git` which creates the settings directory. 
-1. Inside there, make sure the file `settings\setup\install-scripts.sh` is executable then run that. 
+| Component      | Method                          | Default |
+|----------------|---------------------------------|---------|
+| Core tools     | apt (vim, wget, curl, git, gpg) | ON      |
+| Fun terminal   | apt (fortune, cowsay, lolcat)   | ON      |
+| Fastfetch      | apt or GitHub .deb              | ON      |
+| Nerd Fonts     | GitHub releases (7 default)     | ON      |
+| Oh My Zsh      | Install script + Powerlevel10k  | OFF     |
+| GNOME Tweaks   | apt                             | ON      |
+| GNOME Boxes    | apt                             | OFF     |
+| VS Code        | Microsoft apt repo              | ON      |
+| .NET SDK       | Official install script         | OFF     |
+| PowerShell     | Microsoft apt repo              | OFF     |
+| Dart SDK       | Google apt repo                 | OFF     |
+| uv             | Astral install script           | ON      |
+| Claude Code    | npm (auto-installs Node.js)     | OFF     |
+| Obsidian       | AppImage from GitHub            | OFF     |
+| Telegram       | Flatpak                         | OFF     |
+| Spotify        | Flatpak                         | OFF     |
 
-Important Note: Scripts assume you have a "config" directory at `~/config` - the script doesn't create this at the moment (I used to use symlinks which were specific to my workflow) so remember to `mkdir config` in your home directory.
+## What You Get at Runtime
 
-## Works with 
+After installation, every new shell session gives you:
 
-## Debian-based Linux Distros
+- A fortune/cowsay/lolcat greeting
+- Handy aliases (`makepass`, `backup-shell`, `reload-shell`, `help-me`)
+- Python/uv aliases (`create-env`, `activate-env`, `uv-init`, `uv-sync`)
+- `install-nerd-font <Name>` to install additional Nerd Fonts on demand
+- PATH setup for .NET, uv, and local bins
 
-Primary assumptions being made here are that the linux distro is debian or debian based. Scripts also install from snaps, and makes a try to install that if not present. Right now, this is my primary focus. 
+Type `help-me` in any terminal for the full alias list.
 
-### WSL
+## Repository Structure
 
-TODO
+```
+setup/
+  install.sh              # Interactive installer (entry point)
+  lib.sh                  # Shared library (logging, helpers)
+  configure-shell.sh      # Idempotent .bashrc/.zshrc config injection
+  config/shell-config.sh  # Shell config template
+  modules/                # One script per installable component
+scripts/
+  shell-init.sh           # Runtime entry point (sourced from RC file)
+  lib/                    # Aliases, shell-launch greeting, backup
+  help/                   # Help system
+```
 
-### Raspberry Pi
+## Shell Config
 
-TODO - Yet to test on my home Pi. I think the script would need to be more robust to know what works and what doesn't on Raspian (64-bit)
+The installer injects a config block into your `.bashrc` (or `.zshrc`) wrapped in sentinel markers:
 
-## Windows
+```
+# >>> settings-repo-config >>>
+... config ...
+# <<< settings-repo-config <<<
+```
 
-TODO
+Re-running the installer replaces the block in-place rather than appending duplicates.
 
-## Mac 
+## Running Individual Modules
 
-Mostly there... Removed a lot of custom aliases.
+Each module works standalone:
 
+```bash
+bash ~/settings/setup/modules/vscode.sh
+```

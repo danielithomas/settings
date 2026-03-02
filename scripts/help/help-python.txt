@@ -1,0 +1,9 @@
+|------------------------------------------------------------------|
+|                 *** Python / uv HELP - Commands ***              |
+|------------------------------------------------------------------|
+| COMMAND        | DESCRIPTION                                     |
+|------------------------------------------------------------------|
+| create-env     | Create a Python virtual environment via uv      |
+| activate-env   | Activate a .venv in the current directory       |
+| uv-init        | Initialise a new uv project                    |
+| uv-sync        | Sync dependencies from pyproject.toml           |
