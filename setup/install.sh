@@ -43,7 +43,7 @@ else
 fi
 
 CHOICES=$(whiptail --title "$TITLE" \
-    --checklist "Select components to install:" 28 72 16 \
+    --checklist "Select components to install:" 30 72 18 \
     "core-apt"      "Core tools (vim, wget, curl, git, gpg)"       $DEFAULT \
     "fun"           "Fun terminal (fortune, cowsay, lolcat)"        $DEFAULT \
     "fastfetch"     "Fastfetch (system info display)"               $DEFAULT \
@@ -55,8 +55,10 @@ CHOICES=$(whiptail --title "$TITLE" \
     "dotnet"        ".NET SDK (official install script)"            OFF \
     "powershell"    "PowerShell (Microsoft apt repo)"               OFF \
     "dart"          "Dart SDK (Google apt repo)"                    OFF \
+    "github-cli"    "GitHub CLI (gh)"                               $DEFAULT \
     "uv"            "uv - Python package manager (Astral)"          $DEFAULT \
     "claude-code"   "Claude Code CLI"                               OFF \
+    "peon-ping"     "Peon Ping (AI agent audio notifications)"      OFF \
     "obsidian"      "Obsidian (AppImage)"                           OFF \
     "telegram"      "Telegram (Flatpak)"                            OFF \
     "spotify"       "Spotify (Snap)"                                OFF \
