@@ -43,7 +43,7 @@ else
 fi
 
 CHOICES=$(whiptail --title "$TITLE" \
-    --checklist "Select components to install:" 30 72 18 \
+    --checklist "Select components to install:" 30 72 19 \
     "core-apt"      "Core tools (vim, wget, curl, git, gpg)"       $DEFAULT \
     "fun"           "Fun terminal (fortune, cowsay, lolcat)"        $DEFAULT \
     "fastfetch"     "Fastfetch (system info display)"               $DEFAULT \
@@ -59,6 +59,7 @@ CHOICES=$(whiptail --title "$TITLE" \
     "uv"            "uv - Python package manager (Astral)"          $DEFAULT \
     "claude-code"   "Claude Code CLI"                               OFF \
     "peon-ping"     "Peon Ping (AI agent audio notifications)"      OFF \
+    "doc-tools"     "Document processing (pandoc, texlive)"         $DEFAULT \
     "obsidian"      "Obsidian (AppImage)"                           OFF \
     "telegram"      "Telegram (Flatpak)"                            OFF \
     "spotify"       "Spotify (Snap)"                                OFF \
