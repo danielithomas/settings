@@ -43,7 +43,7 @@ else
 fi
 
 CHOICES=$(whiptail --title "$TITLE" \
-    --checklist "Select components to install:" 30 72 19 \
+    --checklist "Select components to install:" 30 72 20 \
     "core-apt"      "Core tools (vim, wget, curl, git, gpg)"       $DEFAULT \
     "fun"           "Fun terminal (fortune, cowsay, lolcat)"        $DEFAULT \
     "fastfetch"     "Fastfetch (system info display)"               $DEFAULT \
@@ -56,6 +56,7 @@ CHOICES=$(whiptail --title "$TITLE" \
     "powershell"    "PowerShell (Microsoft apt repo)"               OFF \
     "dart"          "Dart SDK (Google apt repo)"                    OFF \
     "github-cli"    "GitHub CLI (gh)"                               $DEFAULT \
+    "github-copilot-cli" "GitHub Copilot CLI"                       OFF \
     "uv"            "uv - Python package manager (Astral)"          $DEFAULT \
     "claude-code"   "Claude Code CLI"                               OFF \
     "peon-ping"     "Peon Ping (AI agent audio notifications)"      OFF \
